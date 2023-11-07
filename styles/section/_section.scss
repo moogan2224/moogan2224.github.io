@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap');
+body{
+    background-color: white;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 44px;
+    min-height: 100vh;
+    margin: 0px;
+}
+h1{
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 144px;
+}
+.home{
+    text-align: center;
+    margin: 15px;
+    padding-bottom: 60px;
+    background-color: black;
+    nav{
+        border: 5px solid #000000;
+        background-color: white;
+        margin-left: 530px;
+        margin-right: 530px;
+    }
+    h1{
+        color: white;
+    }
+}
+
+.navHor{
+    justify-content: space-evenly;
+}
+.contentPage{
+    background-color: #EC9751;
+    .borderBox{
+        padding: 7.5px 15px;
+    }
+    ol{
+        li{
+            display: inline-flex;
+            height: 100px;
+            width: 100px;
+            border: 5px solid #000000;
+            box-shadow: $dropShadowB;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .headerC{
+        display: flex;
+        background-color: white;
+        padding: 30px;
+        border: 5px solid #000000;
+        justify-content: center;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer{
+        padding: 7.5px 15px 15px;
+    }
+}
