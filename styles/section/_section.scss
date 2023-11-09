@@ -1,4 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap');
+.borderBox{
+    // applies black border + drop shadow
+    padding: 7.5px 15px;
+}
+.blocky{
+    // applies white bg and padding
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+}
+nav{
+    ol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        :hover{
+            background-color: $colorGD;
+            transition: .3s ease-in-out;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+    }
+}
+.seeAlso{
+        align-items: center;
+        img{
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .seeAlsoImg{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 7px;
+            img{
+                position: relative;
+                width: 316px;
+                height: 172px;
+                object-fit:cover;
+                .seeAlsoText{
+                    position: absolute;
+                }
+            }
+        }
+    }
+.foot{
+    ol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+        :hover{
+            background-color: $colorGD;
+            transition: .3s ease-in-out;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+    }   
+}
+h1{
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 144px;
+}
+h2{ 
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 60px;
+}
+p{  
+    font-family: 'VT323', sans-serif;
+    font-size: 44px;
+}
 body{
     background-color: white;
     font-family: 'VT323', monospace;
@@ -6,10 +100,6 @@ body{
     font-size: 44px;
     min-height: 100vh;
     margin: 0px;
-}
-h1{
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 144px;
 }
 .home{
     text-align: center;
@@ -19,6 +109,7 @@ h1{
     nav{
         border: 5px solid #000000;
         background-color: white;
+        box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
         margin-left: 530px;
         margin-right: 530px;
     }
@@ -26,39 +117,72 @@ h1{
         color: white;
     }
 }
-
-.navHor{
-    justify-content: space-evenly;
-}
-.contentPage{
-    background-color: #EC9751;
-    .borderBox{
-        padding: 7.5px 15px;
-    }
-    ol{
-        li{
-            display: inline-flex;
-            height: 100px;
-            width: 100px;
-            border: 5px solid #000000;
-            box-shadow: $dropShadowB;
-            background-color: white;
-            align-items: center;
-            justify-content: center;
+.graphicDesign{
+    background-color: $colorGD;
+    .head{
+        text-align: center;    
+        align-items: center;
+        img{
+            height: 74px;
+        }
+        h1{
+            font-size: 100px;
         }
     }
-    .headerC{
-        display: flex;
-        background-color: white;
-        padding: 30px;
-        border: 5px solid #000000;
-        justify-content: center;
-    }
-    .content{
+    .contentGrid{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        position: relative; 
+        gap: 20px;
+        .contentCol{
+            display: grid;
+            position: relative; 
+            grid-template-columns: 1fr;
+            gap: 27px;
+            img{
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+                position: relative; 
+                width: 100%;
+                .overlayText{
+                position: absolute;
+                }
+            }
+        }
     }
-    .footer{
-        padding: 7.5px 15px 15px;
+
+}
+.project{
+    background-color: $colorGD;
+    h1{
+        font-size: 100px;
+    }
+    .block{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+    .projectGrid{
+        display: grid;
+        // .row1{
+        //     display: grid;
+        //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        // }
+        // .row2{
+        //     display: grid;
+        //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        // }
+    }
+}
+.aboutMe{
+    background-color: $colorMe;
+    .meGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 72px 10px 99px 72px;
+    }
+    .meText{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
     }
 }
