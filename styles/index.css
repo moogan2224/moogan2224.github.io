@@ -54,29 +54,12 @@ input, textarea {
   box-shadow: 4px 4px 0px 0px #000000;
 }
 
-nav ol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-nav ol :hover {
-  background-color: #EC9751;
-  transition: 0.3s ease-in-out;
-}
-nav ol li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 100px;
-  background-color: white;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
-}
-
 .seeAlso {
   align-items: center;
+}
+.seeAlso p {
+  color: white;
+  font-size: 36px;
 }
 .seeAlso img {
   border: 5px solid #000000;
@@ -95,10 +78,53 @@ nav ol li {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.seeAlso .seeAlsoImg img .seeAlsoText {
+.seeAlso .seeAlsoImg .pic {
+  position: relative;
+}
+.seeAlso .seeAlsoImg .pic .projectImage {
+  position: relative;
+}
+.seeAlso .seeAlsoImg .pic :hover {
+  color: black;
+  background-color: #EC9751;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+.seeAlso .seeAlsoImg .pic .overlayText {
   position: absolute;
+  top: 30%;
+  left: 30%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
+.pic {
+  position: relative;
+}
+.pic .projectImage {
+  position: relative;
+}
+.pic:hover .overlayText {
+  color: black;
+  background-color: #EC9751;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  opacity: 1;
+  transition: 0.2s ease-out;
+}
+.pic .overlayText {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  padding-left: 1%;
+  padding-right: 1%;
+  opacity: 0;
+}
+
+.foot {
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
 .foot ol {
   display: flex;
   align-items: center;
@@ -107,7 +133,7 @@ nav ol li {
 }
 .foot ol :hover {
   background-color: #EC9751;
-  transition: 0.3s ease-in-out;
+  transition: 0.2 ease-in-out;
 }
 .foot ol li {
   display: flex;
@@ -151,6 +177,7 @@ body {
   background-color: black;
 }
 .home nav {
+  color: black;
   border: 5px solid #000000;
   background-color: white;
   box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
@@ -174,15 +201,33 @@ body {
 .graphicDesign .head h1 {
   font-size: 100px;
 }
+.graphicDesign .head ol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.graphicDesign .head ol :hover {
+  background-color: #EC9751;
+  transition: 0.3s ease-in-out;
+}
+.graphicDesign .head ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
 .graphicDesign .contentGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: relative;
   gap: 20px;
 }
 .graphicDesign .contentGrid .contentCol {
   display: grid;
-  position: relative;
   grid-template-columns: 1fr;
   gap: 27px;
 }
@@ -191,9 +236,6 @@ body {
   box-shadow: 4px 4px 0px 0px #000000;
   position: relative;
   width: 100%;
-}
-.graphicDesign .contentGrid .contentCol img .overlayText {
-  position: absolute;
 }
 
 .project {
@@ -207,12 +249,73 @@ body {
   height: 100px;
   background-color: aqua;
 }
-.project .projectGrid {
+.project ol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.project ol :hover {
+  background-color: #EC9751;
+  transition: 0.2s ease-in-out;
+}
+.project ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+.project .projectGrid .slideshow {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.project .projectGrid .slideshow .slideImg {
+  position: relative;
+}
+.project .projectGrid .slideshow .slideArrow {
+  position: absolute;
+  top: 50%;
+}
+.project .gallery {
   display: grid;
+}
+.project .gallery .galleryImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.project .gallery .galleryImg .gallerySquare {
+  max-width: 10vw;
+  max-height: 10vh;
 }
 
 .aboutMe {
   background-color: #A1C273;
+}
+.aboutMe ol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.aboutMe ol :hover {
+  background-color: #A1C273;
+  transition: 0.2s ease-out;
+}
+.aboutMe ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  min-width: 100px;
+  background-color: white;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 .aboutMe .meGrid {
   display: grid;

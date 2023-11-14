@@ -14,30 +14,12 @@
     border: 5px solid #000000;
     box-shadow: 4px 4px 0px 0px #000000;
 }
-nav{
-    ol{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        :hover{
-            background-color: $colorGD;
-            transition: .3s ease-in-out;
-        }
-        li{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-            width: 100px;
-            background-color: white;
-            border: 5px solid #000000;
-            box-shadow: 4px 4px 0px 0px #000000;
-        }
-    }
-}
 .seeAlso{
         align-items: center;
+        p{
+            color: white;
+            font-size: 36px;
+        }
         img{
             border: 5px solid #000000;
             box-shadow: 4px 4px 0px 0px #000000;
@@ -52,13 +34,57 @@ nav{
                 width: 316px;
                 height: 172px;
                 object-fit:cover;
-                .seeAlsoText{
+            }
+            .pic{
+                position: relative;
+                .projectImage{
+                    position: relative;
+                }
+                :hover{
+                    color: black;
+                    background-color: $colorGD;
+                    border: 5px solid #000000;
+                    box-shadow: 4px 4px 0px 0px #000000;
+                }
+                .overlayText{
                     position: absolute;
+                    top:30%;
+                    left:30%;
+                    padding-left: 1%;
+                    padding-right: 1%;
+                    // opacity: 0;
                 }
             }
         }
     }
+.pic{
+    position: relative;
+    .projectImage{
+        position: relative;
+    }
+    &:hover{
+        // background-color: rgba($color: white, $alpha: .5);
+        .overlayText{
+            color: black;
+            background-color: $colorGD;
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+            opacity: 1;
+            transition: .2s ease-out;
+        }
+    }
+    .overlayText{
+        position: absolute;
+        top:30%;
+        left:30%;
+        padding-left: 1%;
+        padding-right: 1%;
+        opacity: 0;
+        }
+    }
 .foot{
+    margin-top: 1%;
+    margin-bottom: 5%;
     ol{
         display: flex;
         align-items: center;
@@ -67,7 +93,7 @@ nav{
         
         :hover{
             background-color: $colorGD;
-            transition: .3s ease-in-out;
+            transition: .2 ease-in-out;
         }
         li{
             display: flex;
@@ -107,15 +133,18 @@ body{
     padding-bottom: 60px;
     background-color: black;
     nav{
+        color: black;
         border: 5px solid #000000;
         background-color: white;
         box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
         margin-left: 530px;
         margin-right: 530px;
+        
     }
     h1{
         color: white;
     }
+    
 }
 .graphicDesign{
     background-color: $colorGD;
@@ -128,15 +157,33 @@ body{
         h1{
             font-size: 100px;
         }
+        ol{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            :hover{
+                background-color: $colorGD;
+                transition: .3s ease-in-out;
+            }
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 100px;
+                background-color: white;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+            }
+        }
     }
     .contentGrid{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: relative; 
+        grid-template-columns: 1fr 1fr; 
         gap: 20px;
         .contentCol{
-            display: grid;
-            position: relative; 
+            display: grid; 
             grid-template-columns: 1fr;
             gap: 27px;
             img{
@@ -144,14 +191,10 @@ body{
                 box-shadow: 4px 4px 0px 0px #000000;
                 position: relative; 
                 width: 100%;
-                .overlayText{
-                position: absolute;
                 }
             }
+            }
         }
-    }
-
-}
 .project{
     background-color: $colorGD;
     h1{
@@ -162,20 +205,75 @@ body{
         height: 100px;
         background-color: aqua;
     }
+    ol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        :hover{
+            background-color: $colorGD;
+            transition: .2s ease-in-out;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+    }
     .projectGrid{
+        .slideshow{
+            position:relative;
+            display: flex;
+            align-content:center ;
+            justify-content: center;
+            .slideImg{
+                position: relative;
+            }
+            .slideArrow{
+                position: absolute;
+                top:50%
+            }
+        }
+    }
+    .gallery{
         display: grid;
-        // .row1{
-        //     display: grid;
-        //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        // }
-        // .row2{
-        //     display: grid;
-        //     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        // }
+        .galleryImg{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            .gallerySquare{
+                max-width: 10vw;
+                max-height: 10vh;
+            }
+        }
     }
 }
 .aboutMe{
     background-color: $colorMe;
+    ol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        :hover{
+            background-color: $colorMe;
+            transition: .2s ease-out;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            min-width: 100px;
+            background-color: white;
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+    }
     .meGrid{
         display: grid;
         grid-template-columns: 1fr 1fr;
