@@ -54,6 +54,28 @@ input, textarea {
   box-shadow: 4px 4px 0px 0px #000000;
 }
 
+#goHome {
+  height: 74px;
+}
+
+.pic:hover .overlayText {
+  color: black;
+  background-color: #EC9751;
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  opacity: 1;
+  transition: 0.2s ease-out;
+  top: 50%;
+  left: 50%;
+}
+.pic .overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
 .seeAlso {
   align-items: center;
 }
@@ -62,6 +84,11 @@ input, textarea {
   font-size: 36px;
 }
 .seeAlso img {
+  position: relative;
+  width: 316px;
+  height: 172px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
 }
@@ -70,55 +97,6 @@ input, textarea {
   display: flex;
   flex-direction: row;
   gap: 7px;
-}
-.seeAlso .seeAlsoImg img {
-  position: relative;
-  width: 316px;
-  height: 172px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.seeAlso .seeAlsoImg .pic {
-  position: relative;
-}
-.seeAlso .seeAlsoImg .pic .projectImage {
-  position: relative;
-}
-.seeAlso .seeAlsoImg .pic :hover {
-  color: black;
-  background-color: #EC9751;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
-}
-.seeAlso .seeAlsoImg .pic .overlayText {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-
-.pic {
-  position: relative;
-}
-.pic .projectImage {
-  position: relative;
-}
-.pic:hover .overlayText {
-  color: black;
-  background-color: #EC9751;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
-  opacity: 1;
-  transition: 0.2s ease-out;
-}
-.pic .overlayText {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  padding-left: 1%;
-  padding-right: 1%;
-  opacity: 0;
 }
 
 .foot {
@@ -152,6 +130,11 @@ h1 {
 }
 
 h2 {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 72px;
+}
+
+h3 {
   font-family: "DotGothic16", sans-serif;
   font-size: 60px;
 }
@@ -271,27 +254,24 @@ body {
 }
 .project .projectGrid .slideshow {
   position: relative;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-.project .projectGrid .slideshow .slideImg {
-  position: relative;
 }
 .project .projectGrid .slideshow .slideArrow {
   position: absolute;
   top: 50%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
 }
 .project .gallery {
-  display: grid;
+  max-width: 1230px;
 }
-.project .gallery .galleryImg {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-.project .gallery .galleryImg .gallerySquare {
-  max-width: 10vw;
-  max-height: 10vh;
+.project .gallery button {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .aboutMe {
@@ -318,11 +298,20 @@ body {
   box-shadow: 4px 4px 0px 0px #000000;
 }
 .aboutMe .meGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 72px 10px 99px 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 75px;
+}
+.aboutMe img {
+  height: auto;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .aboutMe .meText {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  max-width: 630px;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */
