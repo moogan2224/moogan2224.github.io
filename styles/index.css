@@ -58,7 +58,28 @@ input, textarea {
   height: 74px;
 }
 
+.pic {
+  position: relative;
+  color: rgba(255, 255, 255, 0);
+}
+.pic:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity ease 0.3s;
+}
+.pic:hover.contentPic {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.pic:hover.contentPic img {
+  opacity: 0.5;
+}
 .pic:hover .overlayText {
+  position: absolute;
   color: black;
   background-color: #EC9751;
   border: 5px solid #000000;
@@ -67,11 +88,13 @@ input, textarea {
   transition: 0.2s ease-out;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 .pic .overlayText {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   padding-left: 1%;
   padding-right: 1%;
 }
@@ -154,21 +177,37 @@ body {
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 15px;
   padding-bottom: 60px;
   background-color: black;
 }
+.home h1 {
+  color: white;
+  margin-bottom: 80px;
+}
 .home nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: black;
   border: 5px solid #000000;
   background-color: white;
   box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
-  margin-left: 530px;
-  margin-right: 530px;
+  width: 350px;
+  height: 385px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-.home h1 {
-  color: white;
+.home nav button {
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .graphicDesign {
@@ -195,6 +234,7 @@ body {
   transition: 0.3s ease-in-out;
 }
 .graphicDesign .head ol li {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +257,6 @@ body {
 .graphicDesign .contentGrid .contentCol img {
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
-  position: relative;
   width: 100%;
 }
 
@@ -243,6 +282,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 .project ol li {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,12 +307,6 @@ body {
 .project .gallery {
   max-width: 1230px;
 }
-.project .gallery button {
-  height: 200px;
-  width: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
 .aboutMe {
   background-color: #A1C273;
@@ -288,6 +322,7 @@ body {
   transition: 0.2s ease-out;
 }
 .aboutMe ol li {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,15 +338,18 @@ body {
   justify-content: space-around;
   padding: 75px;
 }
-.aboutMe img {
+.aboutMe .meGrid img {
   height: auto;
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .aboutMe .meText {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   max-width: 630px;
   text-align: left;
+}
+.aboutMe .meText .meTextRow1 {
+  border-bottom: 5px solid #000000;
+  padding-bottom: 10%;
+  margin-bottom: 10%;
 }/*# sourceMappingURL=index.css.map */

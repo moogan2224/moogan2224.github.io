@@ -18,10 +18,28 @@
     height:74px;
 }
 .pic{
-    // position: relative;
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+
+    &:before{
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity ease .3s;
+    }
     &:hover{
-        // background-color: rgba($color: white, $alpha: .5);
+        &.contentPic{
+            background-color: rgba(255, 255, 255, .5);
+            img{
+                opacity: .5;
+            }
+        }
         .overlayText{
+            position: absolute;
             color: black;
             background-color: $colorGD;
             border: 5px solid #000000;
@@ -30,19 +48,21 @@
             transition: .2s ease-out;
             top:50%;
             left:50%;
+            transform: translate(-50%, -50%);
         }
     }
     .overlayText{
         position: absolute;
-        top:50%;
-        left:50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding-left: 1%;
         padding-right: 1%;
         }
     }
 .seeAlso{
         align-items: center;
-        p{
+        p{  
             color: white;
             font-size: 36px;
         }
@@ -90,6 +110,7 @@
 h1{
     font-family: 'DotGothic16', sans-serif;
     font-size: 144px;
+    // letter-spacing: normal; fix
 }
 h2{ 
     font-family: 'DotGothic16', sans-serif;
@@ -112,22 +133,38 @@ body{
     margin: 0px;
 }
 .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 15px;
     padding-bottom: 60px;
     background-color: black;
+    h1{
+        color: white;
+        margin-bottom: 80px;
+    }
     nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         color: black;
         border: 5px solid #000000;
         background-color: white;
         box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
-        margin-left: 530px;
-        margin-right: 530px;
-        
+        width: 350px;
+        height: 385px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        button{
+            padding-left:18px;
+            padding-right:18px;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+        }
     }
-    h1{
-        color: white;
-    }
+
     
 }
 .graphicDesign{
@@ -151,6 +188,7 @@ body{
                 transition: .3s ease-in-out;
             }
             li{
+                text-decoration: none;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -173,12 +211,11 @@ body{
             img{
                 border: 5px solid #000000;
                 box-shadow: 4px 4px 0px 0px #000000;
-                position: relative; 
                 width: 100%;
-                }
-            }
             }
         }
+    }
+}
 .project{
     background-color: $colorGD;
     h1{
@@ -199,6 +236,7 @@ body{
             transition: .2s ease-in-out;
         }
         li{
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -212,12 +250,6 @@ body{
     .projectGrid{
         .slideshow{
             position:relative;
-            // display: flex;
-            // align-content:center ;
-            // justify-content: center;
-            // .slideImg{
-            //     position: relative;
-            // }
             .slideArrow{
                 position: absolute;
                 top:50%;
@@ -231,11 +263,6 @@ body{
     }
     .gallery{
         max-width: 1230px;
-        button{
-            height: 200px;
-            width: 200px;
-            object-fit: cover;
-        }
         }
     }
 .aboutMe{
@@ -250,6 +277,7 @@ body{
             transition: .2s ease-out;
         }
         li{
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -265,16 +293,19 @@ body{
         flex-direction: row;
         justify-content: space-around;
         padding: 75px;
-    }
-    img{
-        height: auto;
-        width: auto;
-        object-fit: cover;
+        img{
+            height: auto;
+            width: auto;
+            object-fit: cover;
+        }
     }
     .meText{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
         max-width: 630px;
         text-align: left;
+        .meTextRow1{
+            border-bottom: 5px solid #000000;
+            padding-bottom: 10%;
+            margin-bottom: 10%;
+        }
     }
 }
