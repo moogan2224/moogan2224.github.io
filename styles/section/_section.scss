@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap');
+@include respond('500px'){
+
+}
+
 .borderBox{
     // applies black border + drop shadow
     padding: 7.5px 15px;
@@ -10,12 +14,19 @@
     justify-content: center;
     text-align: center;
     background-color: white;
-    padding: 30px;
+    padding: 10px;
     border: 5px solid #000000;
     box-shadow: 4px 4px 0px 0px #000000;
+    @include respond('430px'){
+        padding: 30px;
+    }
 }
 #goHome{
     height:74px;
+}
+#headImg{
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px  0px #000000;
 }
 .pic{
     position: relative;
@@ -109,20 +120,40 @@
 }
 h1{
     font-family: 'DotGothic16', sans-serif;
-    font-size: 144px;
-    // letter-spacing: normal; fix
+    @include respond('430px'){
+        font-size: 125px;
+        
+    }
+    font-size: 64px;
+    line-height: 1; 
+
 }
 h2{ 
     font-family: 'DotGothic16', sans-serif;
-    font-size: 72px;
+    @include respond('430px'){
+        font-size: 72px;
+    }
+    font-size: 40px;
 }
 h3{ 
     font-family: 'DotGothic16', sans-serif;
-    font-size: 60px;
+    @include respond('430px'){
+        font-size: 60px;
+    }
+    font-size: 28px;
 }
 p{  
     font-family: 'VT323', sans-serif;
-    font-size: 44px;
+    @include respond('430px'){
+        font-size: 44px;
+    }
+    font-size: 18px;
+}
+li{
+    @include respond('430px'){
+        font-size: 60px;    
+    }
+    font-size: 24px;
 }
 body{
     background-color: white;
@@ -139,11 +170,15 @@ body{
     align-items: center;
     text-align: center;
     margin: 15px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     background-color: black;
     h1{
         color: white;
-        margin-bottom: 80px;
+        line-height: 1; 
+        @include respond('430px'){
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
     }
     nav{
         display: flex;
@@ -153,14 +188,19 @@ body{
         border: 5px solid #000000;
         background-color: white;
         box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
-        width: 350px;
-        height: 385px;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        @include respond('430px'){
+            width: 340px;
+            height: 340px;            
+        }
+        font-size: 44px;
+        width: 340px;
+        height: 560px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         button{
             padding-left:18px;
             padding-right:18px;
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(255, 255, 255, 1);
             border: none;
         }
     }
@@ -175,14 +215,14 @@ body{
         img{
             height: 74px;
         }
-        h1{
-            font-size: 100px;
-        }
         ol{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            @include respond('430px'){
+                gap: 20px;
+            }
+            gap: 10px;
             :hover{
                 background-color: $colorGD;
                 transition: .3s ease-in-out;
@@ -192,26 +232,48 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 100px;
-                width: 100px;
+                @include respond('430px'){
+                    height: 100px;
+                    width: 100px;
+                    border: 5px solid #000000;
+                    box-shadow: 4px 4px 0px 0px #000000;
+                }
+                height: 50px;
+                width: 50px;
                 background-color: white;
-                border: 5px solid #000000;
-                box-shadow: 4px 4px 0px 0px #000000;
+                border: 4px solid #000000;
+                box-shadow: 3px 3px 0px 0px #000000;
+
+
             }
         }
     }
     .contentGrid{
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        gap: 20px;
-        .contentCol{
-            display: grid; 
-            grid-template-columns: 1fr;
-            gap: 27px;
+        @include respond('430px'){
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+            .contentCol{
+                display: grid; 
+                grid-template-columns: 1fr;
+                gap: 27px;
+                img{
+                    border: 5px solid #000000;
+                    box-shadow: 4px 4px 0px 0px #000000;
+                    width: 100%;
+                }
+            }
+        }
+        .contentCol{   
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             img{
-                border: 5px solid #000000;
-                box-shadow: 4px 4px 0px 0px #000000;
+                border: 2px solid #000000;
+                box-shadow: 3px 3px 0px 0px #000000;
+                max-height: 150px;
                 width: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -220,6 +282,9 @@ body{
     background-color: $colorGD;
     h1{
         font-size: 100px;
+    }
+    h4{
+        margin-bottom: 10px;
     }
     .block{
         width: 100px;
@@ -245,26 +310,27 @@ body{
             background-color: white;
             border: 5px solid #000000;
             box-shadow: 4px 4px 0px 0px #000000;
-        }
-    }
-    .projectGrid{
-        .slideshow{
-            position:relative;
-            .slideArrow{
-                position: absolute;
-                top:50%;
-                width: 100%;
-                z-index: 1;
-                display: flex;
-                justify-content: space-between;
-                transform: translateY(-50%);
-            }
+            
         }
     }
     .gallery{
-        max-width: 1230px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr;
+        .galleryGrid{
+            grid-template-rows: 1fr;
+            display: grid;
+            gap: 20px;
+        }
+        img{
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+            height: auto;
+            max-width: 500px;
+            object-fit: contain;       
         }
     }
+}
 .aboutMe{
     background-color: $colorMe;
     ol{

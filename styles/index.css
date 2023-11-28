@@ -49,13 +49,23 @@ input, textarea {
   justify-content: center;
   text-align: center;
   background-color: white;
-  padding: 30px;
+  padding: 10px;
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
+}
+@media screen and (min-width: 430px) {
+  .blocky {
+    padding: 30px;
+  }
 }
 
 #goHome {
   height: 74px;
+}
+
+#headImg {
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .pic {
@@ -149,22 +159,52 @@ input, textarea {
 
 h1 {
   font-family: "DotGothic16", sans-serif;
-  font-size: 144px;
+  font-size: 64px;
+  line-height: 1;
+}
+@media screen and (min-width: 430px) {
+  h1 {
+    font-size: 125px;
+  }
 }
 
 h2 {
   font-family: "DotGothic16", sans-serif;
-  font-size: 72px;
+  font-size: 40px;
+}
+@media screen and (min-width: 430px) {
+  h2 {
+    font-size: 72px;
+  }
 }
 
 h3 {
   font-family: "DotGothic16", sans-serif;
-  font-size: 60px;
+  font-size: 28px;
+}
+@media screen and (min-width: 430px) {
+  h3 {
+    font-size: 60px;
+  }
 }
 
 p {
   font-family: "VT323", sans-serif;
-  font-size: 44px;
+  font-size: 18px;
+}
+@media screen and (min-width: 430px) {
+  p {
+    font-size: 44px;
+  }
+}
+
+li {
+  font-size: 24px;
+}
+@media screen and (min-width: 430px) {
+  li {
+    font-size: 60px;
+  }
 }
 
 body {
@@ -183,12 +223,18 @@ body {
   align-items: center;
   text-align: center;
   margin: 15px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   background-color: black;
 }
 .home h1 {
   color: white;
-  margin-bottom: 80px;
+  line-height: 1;
+}
+@media screen and (min-width: 430px) {
+  .home h1 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 .home nav {
   display: flex;
@@ -198,15 +244,22 @@ body {
   border: 5px solid #000000;
   background-color: white;
   box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
-  width: 350px;
-  height: 385px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  font-size: 44px;
+  width: 340px;
+  height: 560px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 430px) {
+  .home nav {
+    width: 340px;
+    height: 340px;
+  }
 }
 .home nav button {
   padding-left: 18px;
   padding-right: 18px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(255, 255, 255);
   border: none;
 }
 
@@ -220,14 +273,16 @@ body {
 .graphicDesign .head img {
   height: 74px;
 }
-.graphicDesign .head h1 {
-  font-size: 100px;
-}
 .graphicDesign .head ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
+}
+@media screen and (min-width: 430px) {
+  .graphicDesign .head ol {
+    gap: 20px;
+  }
 }
 .graphicDesign .head ol :hover {
   background-color: #EC9751;
@@ -238,26 +293,49 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background-color: white;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
 }
-.graphicDesign .contentGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+@media screen and (min-width: 430px) {
+  .graphicDesign .head ol li {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+}
+@media screen and (min-width: 430px) {
+  .graphicDesign .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .graphicDesign .contentGrid .contentCol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+  .graphicDesign .contentGrid .contentCol img {
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+    width: 100%;
+  }
 }
 .graphicDesign .contentGrid .contentCol {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .graphicDesign .contentGrid .contentCol img {
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  max-height: 150px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project {
@@ -265,6 +343,9 @@ body {
 }
 .project h1 {
   font-size: 100px;
+}
+.project h4 {
+  margin-bottom: 10px;
 }
 .project .block {
   width: 100px;
@@ -292,20 +373,23 @@ body {
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
 }
-.project .projectGrid .slideshow {
-  position: relative;
-}
-.project .projectGrid .slideshow .slideArrow {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
 .project .gallery {
-  max-width: 1230px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.project .gallery .galleryGrid {
+  grid-template-rows: 1fr;
+  display: grid;
+  gap: 20px;
+}
+.project .gallery img {
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  height: auto;
+  max-width: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .aboutMe {
