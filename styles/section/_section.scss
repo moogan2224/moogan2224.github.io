@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap');
-@include respond('500px'){
-
+@include respond('600px'){
 }
 
 .borderBox{
@@ -15,14 +14,19 @@
     text-align: center;
     background-color: white;
     padding: 10px;
-    border: 5px solid #000000;
-    box-shadow: 4px 4px 0px 0px #000000;
-    @include respond('430px'){
+    border: 4px solid #000000;
+    box-shadow: 3px 3px 0px 0px #000000;
+    @include respond('600px'){
+        border: 5px solid #000000;
+        box-shadow: 4px 4px 0px 0px #000000;
         padding: 30px;
     }
 }
 #goHome{
-    height:74px;
+    height: 50px;
+    @include respond('600px'){
+        height:74px;
+    }
 }
 #headImg{
     border: 5px solid #000000;
@@ -36,7 +40,6 @@
         content: "";
         width: 100%;
         position: absolute;
-        height: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -53,13 +56,17 @@
             position: absolute;
             color: black;
             background-color: $colorGD;
-            border: 5px solid #000000;
-            box-shadow: 4px 4px 0px 0px #000000;
+            border: 2px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
             opacity: 1;
             transition: .2s ease-out;
             top:50%;
             left:50%;
             transform: translate(-50%, -50%);
+            @include respond('600px'){
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+            }
         }
     }
     .overlayText{
@@ -69,13 +76,20 @@
         transform: translate(-50%, -50%);
         padding-left: 1%;
         padding-right: 1%;
+        font-size: 24px;
+        @include respond('600px'){
+            font-size: 40px;
         }
     }
+
+}
 .seeAlso{
         align-items: center;
         p{  
             color: white;
-            font-size: 36px;
+            @include respond('600px'){
+                font-size: 36px;
+            }
         }
         img{
             position: relative;
@@ -110,47 +124,55 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100px;
-            width: 100px;
+            height: 60px;
+            width: 60px;
             background-color: white;
-            border: 5px solid #000000;
-            box-shadow: 4px 4px 0px 0px #000000;
+            border: 4px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+
+            @include respond('600px'){
+                height: 100px;
+                width: 100px;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;   
+            }
         }
     }   
 }
 h1{
     font-family: 'DotGothic16', sans-serif;
-    @include respond('430px'){
-        font-size: 125px;
-        
-    }
     font-size: 64px;
-    line-height: 1; 
+    line-height: 1;
+    padding-bottom: 15px;
+    @include respond('600px'){
+        font-size: 125px;
+        padding-bottom: 35px;
+    }
 
 }
 h2{ 
     font-family: 'DotGothic16', sans-serif;
-    @include respond('430px'){
+    @include respond('600px'){
         font-size: 72px;
     }
     font-size: 40px;
 }
 h3{ 
     font-family: 'DotGothic16', sans-serif;
-    @include respond('430px'){
+    @include respond('600px'){
         font-size: 60px;
     }
     font-size: 28px;
 }
 p{  
     font-family: 'VT323', sans-serif;
-    @include respond('430px'){
+    @include respond('600px'){
         font-size: 44px;
     }
     font-size: 18px;
 }
 li{
-    @include respond('430px'){
+    @include respond('600px'){
         font-size: 60px;    
     }
     font-size: 24px;
@@ -175,8 +197,8 @@ body{
     h1{
         color: white;
         line-height: 1; 
-        @include respond('430px'){
-            padding-top: 20px;
+        margin-top: 20px;
+        @include respond('600px'){
             margin-bottom: 20px;
         }
     }
@@ -185,13 +207,9 @@ body{
         flex-direction: column;
         justify-content: space-between;
         color: black;
-        border: 5px solid #000000;
+        border: 4px solid #000000;
         background-color: white;
-        box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
-        @include respond('430px'){
-            width: 340px;
-            height: 340px;            
-        }
+        box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.5);
         font-size: 44px;
         width: 340px;
         height: 560px;
@@ -202,6 +220,12 @@ body{
             padding-right:18px;
             background-color: rgba(255, 255, 255, 1);
             border: none;
+        }
+        @include respond('600px'){
+            width: 340px;
+            height: 340px;
+            border: 5px solid #000000;   
+            box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);         
         }
     }
 
@@ -219,7 +243,7 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            @include respond('430px'){
+            @include respond('600px'){
                 gap: 20px;
             }
             gap: 10px;
@@ -232,56 +256,56 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include respond('430px'){
-                    height: 100px;
-                    width: 100px;
-                    border: 5px solid #000000;
-                    box-shadow: 4px 4px 0px 0px #000000;
-                }
                 height: 50px;
                 width: 50px;
                 background-color: white;
                 border: 4px solid #000000;
                 box-shadow: 3px 3px 0px 0px #000000;
+                @include respond('600px'){
+                    height: 100px;
+                    width: 100px;
+                    border: 5px solid #000000;
+                    box-shadow: 4px 4px 0px 0px #000000;
+                }
 
 
             }
         }
     }
     .contentGrid{
-        @include respond('430px'){
+        @include respond('600px'){
+            position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr; 
-            gap: 20px;
-            .contentCol{
-                display: grid; 
-                grid-template-columns: 1fr;
-                gap: 27px;
-                img{
-                    border: 5px solid #000000;
-                    box-shadow: 4px 4px 0px 0px #000000;
-                    width: 100%;
-                }
-            }
-        }
-        .contentCol{   
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            gap: 27px;
             img{
-                border: 2px solid #000000;
-                box-shadow: 3px 3px 0px 0px #000000;
-                max-height: 150px;
-                width: 100%;
+                position: relative;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+                max-height: 300px;
+                width: auto;
                 object-fit: cover;
             }
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        img{
+            border: 5px solid #000000;
+            box-shadow: 4px 4px 0px 0px #000000;
+            max-height:150px;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
 .project{
     background-color: $colorGD;
     h1{
-        font-size: 100px;
+        font-size: 50px;
+        @include respond('600px'){
+            font-size: 100px;
+        }
     }
     h4{
         margin-bottom: 10px;
@@ -305,29 +329,40 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100px;
-            width: 100px;
+            height: 50px;
+            width: 50px;
             background-color: white;
-            border: 5px solid #000000;
-            box-shadow: 4px 4px 0px 0px #000000;
+            border: 4px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+            @include respond('600px'){
+                height: 100px;
+                width: 100px;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+            }
             
+        }
+    }
+    .headNav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #goHome{
+            margin-bottom: 5px;
         }
     }
     .gallery{
         position: relative;
-        display: grid;
-        grid-template-rows: 1fr;
-        .galleryGrid{
-            grid-template-rows: 1fr;
-            display: grid;
-            gap: 20px;
-        }
+        display: flex;
+        flex-basis: 30%;
+        flex-grow: 1;
+        flex-direction: column;
+        gap:10px;
         img{
             border: 5px solid #000000;
             box-shadow: 4px 4px 0px 0px #000000;
-            height: auto;
-            max-width: 500px;
-            object-fit: contain;       
+            height: 100%;
+            object-fit: cover;       
         }
     }
 }
@@ -347,31 +382,61 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100px;
-            min-width: 100px;
+            height: 50px;
+            width: 50px;
             background-color: white;
-            border: 5px solid #000000;
-            box-shadow: 4px 4px 0px 0px #000000;
+            border: 4px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+            @include respond('600px'){
+                height: 100px;
+                width: 100px;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+            }
         }
     }
     .meGrid{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        padding: 75px;
-        img{
-            height: auto;
-            width: auto;
-            object-fit: cover;
+        justify-content: space-between;
+        padding: 10px 10px 20px 10px;
+        .meText{
+            max-width: 50%;   
+            text-align: left;
+            overflow-wrap: break-word;           
+            .meTextRow1{
+                border-bottom: 3px solid #000000;
+                padding-bottom: 8%;
+                margin-bottom: 3%;
+            }
+            @include respond('600px'){
+                max-width: 630px;
+                text-align: left;
+                .meTextRow1{
+                    border-bottom: 5px solid #000000;
+                    padding-bottom: 10%;
+                    margin-bottom: 10%;
+                }
+            }
         }
-    }
-    .meText{
-        max-width: 630px;
-        text-align: left;
-        .meTextRow1{
-            border-bottom: 5px solid #000000;
-            padding-bottom: 10%;
-            margin-bottom: 10%;
+        img{
+            max-width: 175px; 
+            object-fit: cover;
+            border: 4px solid #000000;
+            box-shadow: 3px 3px 0px 0px #000000;
+            height: auto;
+            object-fit: cover;      
+            @include respond('600px'){
+                max-width: 630px;
+                height: auto;
+                object-fit: cover;
+                border: 5px solid #000000;
+                box-shadow: 4px 4px 0px 0px #000000;
+            } 
+        }
+        @include respond('600px'){
+            justify-content: space-around;
+            padding: 75px;
         }
     }
 }

@@ -50,17 +50,24 @@ input, textarea {
   text-align: center;
   background-color: white;
   padding: 10px;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   .blocky {
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
     padding: 30px;
   }
 }
 
 #goHome {
-  height: 74px;
+  height: 50px;
+}
+@media screen and (min-width: 600px) {
+  #goHome {
+    height: 74px;
+  }
 }
 
 #headImg {
@@ -76,7 +83,6 @@ input, textarea {
   content: "";
   width: 100%;
   position: absolute;
-  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -92,13 +98,19 @@ input, textarea {
   position: absolute;
   color: black;
   background-color: #EC9751;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
   opacity: 1;
   transition: 0.2s ease-out;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 600px) {
+  .pic:hover .overlayText {
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
 }
 .pic .overlayText {
   position: absolute;
@@ -107,6 +119,12 @@ input, textarea {
   transform: translate(-50%, -50%);
   padding-left: 1%;
   padding-right: 1%;
+  font-size: 24px;
+}
+@media screen and (min-width: 600px) {
+  .pic .overlayText {
+    font-size: 40px;
+  }
 }
 
 .seeAlso {
@@ -114,7 +132,11 @@ input, textarea {
 }
 .seeAlso p {
   color: white;
-  font-size: 36px;
+}
+@media screen and (min-width: 600px) {
+  .seeAlso p {
+    font-size: 36px;
+  }
 }
 .seeAlso img {
   position: relative;
@@ -150,21 +172,31 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   background-color: white;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+@media screen and (min-width: 600px) {
+  .foot ol li {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
 }
 
 h1 {
   font-family: "DotGothic16", sans-serif;
   font-size: 64px;
   line-height: 1;
+  padding-bottom: 15px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   h1 {
     font-size: 125px;
+    padding-bottom: 35px;
   }
 }
 
@@ -172,7 +204,7 @@ h2 {
   font-family: "DotGothic16", sans-serif;
   font-size: 40px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   h2 {
     font-size: 72px;
   }
@@ -182,7 +214,7 @@ h3 {
   font-family: "DotGothic16", sans-serif;
   font-size: 28px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   h3 {
     font-size: 60px;
   }
@@ -192,7 +224,7 @@ p {
   font-family: "VT323", sans-serif;
   font-size: 18px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   p {
     font-size: 44px;
   }
@@ -201,7 +233,7 @@ p {
 li {
   font-size: 24px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   li {
     font-size: 60px;
   }
@@ -229,10 +261,10 @@ body {
 .home h1 {
   color: white;
   line-height: 1;
+  margin-top: 20px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   .home h1 {
-    padding-top: 20px;
     margin-bottom: 20px;
   }
 }
@@ -241,26 +273,28 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: black;
-  border: 5px solid #000000;
+  border: 4px solid #000000;
   background-color: white;
-  box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.5);
   font-size: 44px;
   width: 340px;
   height: 560px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-@media screen and (min-width: 430px) {
-  .home nav {
-    width: 340px;
-    height: 340px;
-  }
-}
 .home nav button {
   padding-left: 18px;
   padding-right: 18px;
   background-color: rgb(255, 255, 255);
   border: none;
+}
+@media screen and (min-width: 600px) {
+  .home nav {
+    width: 340px;
+    height: 340px;
+    border: 5px solid #000000;
+    box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .graphicDesign {
@@ -279,7 +313,7 @@ body {
   justify-content: center;
   gap: 10px;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   .graphicDesign .head ol {
     gap: 20px;
   }
@@ -299,7 +333,7 @@ body {
   border: 4px solid #000000;
   box-shadow: 3px 3px 0px 0px #000000;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 600px) {
   .graphicDesign .head ol li {
     height: 100px;
     width: 100px;
@@ -307,31 +341,31 @@ body {
     box-shadow: 4px 4px 0px 0px #000000;
   }
 }
-@media screen and (min-width: 430px) {
-  .graphicDesign .contentGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  .graphicDesign .contentGrid .contentCol {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 27px;
-  }
-  .graphicDesign .contentGrid .contentCol img {
-    border: 5px solid #000000;
-    box-shadow: 4px 4px 0px 0px #000000;
-    width: 100%;
-  }
-}
-.graphicDesign .contentGrid .contentCol {
+.graphicDesign .contentGrid {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.graphicDesign .contentGrid .contentCol img {
-  border: 2px solid #000000;
-  box-shadow: 3px 3px 0px 0px #000000;
+@media screen and (min-width: 600px) {
+  .graphicDesign .contentGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 27px;
+  }
+  .graphicDesign .contentGrid img {
+    position: relative;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+    max-height: 300px;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.graphicDesign .contentGrid img {
+  border: 5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
   max-height: 150px;
   width: 100%;
   -o-object-fit: cover;
@@ -342,7 +376,12 @@ body {
   background-color: #EC9751;
 }
 .project h1 {
-  font-size: 100px;
+  font-size: 50px;
+}
+@media screen and (min-width: 600px) {
+  .project h1 {
+    font-size: 100px;
+  }
 }
 .project h4 {
   margin-bottom: 10px;
@@ -367,29 +406,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   background-color: white;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+@media screen and (min-width: 600px) {
+  .project ol li {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
+}
+.project .headNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project .headNav #goHome {
+  margin-bottom: 5px;
 }
 .project .gallery {
   position: relative;
-  display: grid;
-  grid-template-rows: 1fr;
-}
-.project .gallery .galleryGrid {
-  grid-template-rows: 1fr;
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-basis: 30%;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 10px;
 }
 .project .gallery img {
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
-  height: auto;
-  max-width: 500px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .aboutMe {
@@ -410,30 +462,69 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100px;
-  min-width: 100px;
+  height: 50px;
+  width: 50px;
   background-color: white;
-  border: 5px solid #000000;
-  box-shadow: 4px 4px 0px 0px #000000;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+@media screen and (min-width: 600px) {
+  .aboutMe ol li {
+    height: 100px;
+    width: 100px;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
 }
 .aboutMe .meGrid {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  padding: 75px;
+  justify-content: space-between;
+  padding: 10px 10px 20px 10px;
+}
+.aboutMe .meGrid .meText {
+  max-width: 50%;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+.aboutMe .meGrid .meText .meTextRow1 {
+  border-bottom: 3px solid #000000;
+  padding-bottom: 8%;
+  margin-bottom: 3%;
+}
+@media screen and (min-width: 600px) {
+  .aboutMe .meGrid .meText {
+    max-width: 630px;
+    text-align: left;
+  }
+  .aboutMe .meGrid .meText .meTextRow1 {
+    border-bottom: 5px solid #000000;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+  }
 }
 .aboutMe .meGrid img {
-  height: auto;
-  width: auto;
+  max-width: 175px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  height: auto;
+  object-fit: cover;
 }
-.aboutMe .meText {
-  max-width: 630px;
-  text-align: left;
+@media screen and (min-width: 600px) {
+  .aboutMe .meGrid img {
+    max-width: 630px;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 5px solid #000000;
+    box-shadow: 4px 4px 0px 0px #000000;
+  }
 }
-.aboutMe .meText .meTextRow1 {
-  border-bottom: 5px solid #000000;
-  padding-bottom: 10%;
-  margin-bottom: 10%;
+@media screen and (min-width: 600px) {
+  .aboutMe .meGrid {
+    justify-content: space-around;
+    padding: 75px;
+  }
 }/*# sourceMappingURL=index.css.map */
