@@ -61,15 +61,6 @@ input, textarea {
   }
 }
 
-#goHome {
-  height: 50px;
-}
-@media screen and (min-width: 600px) {
-  #goHome {
-    height: 74px;
-  }
-}
-
 #headImg {
   border: 5px solid #000000;
   box-shadow: 4px 4px 0px 0px #000000;
@@ -257,6 +248,7 @@ body {
   margin: 15px;
   padding-bottom: 30px;
   background-color: black;
+  transition: 0.8s;
 }
 .home h1 {
   color: white;
@@ -271,28 +263,29 @@ body {
 .home nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  color: black;
+  justify-content: space-around;
+  width: 320px;
+  height: 500px;
   border: 4px solid #000000;
   background-color: white;
-  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.5);
   font-size: 44px;
-  width: 340px;
-  height: 560px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  color: black;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.5);
 }
-.home nav button {
-  padding-left: 18px;
-  padding-right: 18px;
-  background-color: rgb(255, 255, 255);
-  border: none;
+.home nav a {
+  margin: 0px 10px 20px 10px;
+}
+.home nav a:hover {
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 @media screen and (min-width: 600px) {
   .home nav {
     width: 340px;
-    height: 340px;
-    border: 5px solid #000000;
+    height: 400px;
+    justify-content: space-between;
+    padding-top: 20px;
+    border: 4px solid #000000;
     box-shadow: 6px 6px 0px 0px rgba(255, 255, 255, 0.5);
   }
 }
@@ -305,7 +298,12 @@ body {
   align-items: center;
 }
 .graphicDesign .head img {
-  height: 74px;
+  height: 50px;
+}
+@media screen and (min-width: 600px) {
+  .graphicDesign .head img {
+    height: 74px;
+  }
 }
 .graphicDesign .head ol {
   display: flex;
@@ -425,8 +423,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-.project .headNav #goHome {
-  margin-bottom: 5px;
+.project .headNav img {
+  height: 50px;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .project .headNav img {
+    height: 74px;
+    padding-bottom: 10px;
+  }
 }
 .project .gallery {
   position: relative;
@@ -447,17 +452,29 @@ body {
 .aboutMe {
   background-color: #A1C273;
 }
-.aboutMe ol {
+.aboutMe .head {
+  text-align: center;
+  align-items: center;
+}
+.aboutMe .head img {
+  height: 50px;
+}
+@media screen and (min-width: 600px) {
+  .aboutMe .head img {
+    height: 74px;
+  }
+}
+.aboutMe .head ol {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-.aboutMe ol :hover {
+.aboutMe .head ol :hover {
   background-color: #A1C273;
   transition: 0.2s ease-out;
 }
-.aboutMe ol li {
+.aboutMe .head ol li {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -469,7 +486,7 @@ body {
   box-shadow: 3px 3px 0px 0px #000000;
 }
 @media screen and (min-width: 600px) {
-  .aboutMe ol li {
+  .aboutMe .head ol li {
     height: 100px;
     width: 100px;
     border: 5px solid #000000;
@@ -481,6 +498,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 10px 20px 10px;
+}
+@media screen and (min-width: 600px) {
+  .aboutMe .meGrid {
+    justify-content: space-between;
+    padding: 10px 10px 20px 10px;
+    justify-content: space-around;
+    padding: 75px;
+  }
 }
 .aboutMe .meGrid .meText {
   max-width: 50%;
@@ -494,7 +519,7 @@ body {
 }
 @media screen and (min-width: 600px) {
   .aboutMe .meGrid .meText {
-    max-width: 630px;
+    max-width: 600px;
     text-align: left;
   }
   .aboutMe .meGrid .meText .meTextRow1 {
@@ -522,9 +547,7 @@ body {
     box-shadow: 4px 4px 0px 0px #000000;
   }
 }
-@media screen and (min-width: 600px) {
-  .aboutMe .meGrid {
-    justify-content: space-around;
-    padding: 75px;
-  }
+.aboutMe .foot ol :hover {
+  background-color: #A1C273;
+  transition: 0.2 ease-in-out;
 }/*# sourceMappingURL=index.css.map */
