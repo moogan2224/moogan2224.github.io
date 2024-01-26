@@ -448,6 +448,17 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.project .blog p {
+  font-size: 28px;
+}
+.project .blog .blogPics img {
+  max-height: 150px;
+}
+.project .blog .blogPics .blogGallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
 .aboutMe {
   background-color: #A1C273;

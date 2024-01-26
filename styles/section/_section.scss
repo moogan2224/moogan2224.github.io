@@ -369,6 +369,21 @@ body{
             object-fit: cover;       
         }
     }
+    .blog{
+        p{
+            font-size: 28px;
+        }
+        .blogPics{
+            img{
+                max-height: 150px;
+            }
+            .blogGallery{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }   
 }
 .aboutMe{
     background-color: $colorMe;
