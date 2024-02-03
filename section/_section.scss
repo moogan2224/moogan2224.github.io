@@ -76,6 +76,7 @@
     }
 
 }
+
 .seeAlso{
         align-items: center;
         p{  
@@ -373,15 +374,20 @@ body{
         p{
             font-size: 28px;
         }
+        .week{
+            padding-bottom: 50px;
+        }
         .blogPics{
             img{
                 max-height: 150px;
             }
-            .blogGallery{
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
+
+        }
+        .blogGallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
     }   
 }
