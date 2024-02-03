@@ -454,10 +454,19 @@ body {
 .project .blog .blogPics img {
   max-height: 150px;
 }
-.project .blog .blogPics .blogGallery {
+.project .blog .blogGallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+.project .blog .week {
+  padding-bottom: 30px;
+  border-bottom: 3px solid #000000;
+  margin-bottom: 30px;
+}
+.project .blog .caption {
+  margin-bottom: 20px;
 }
 
 .aboutMe {
